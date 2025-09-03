@@ -1,37 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Srijita Kayal - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Srijita Kayal - Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0; font-family: 'Poppins', sans-serif; background: #121212; color: #eee;
+    }
+    nav {
+      background: #1f1f1f; padding: 1rem; position: sticky; top: 0; display: flex; justify-content: center;
+    }
+    nav ul {
+      list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;
+    }
+    nav a {
+      color: #eee; text-decoration: none; font-weight: 600;
+    }
+    nav a:hover {
+      color: #00bcd4;
+    }
+    section {
+      padding: 4rem 2rem; max-width: 900px; margin: auto;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 6rem;
+    }
+    .hero h1 {
+      font-size: 3rem; margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.25rem; color: #00bcd4;
+    }
+    .about-content {
+      display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+    }
+    .about-content img {
+      width: 150px; border-radius: 50%;
+      border: 3px solid #00bcd4;
+    }
+    .skill {
+      margin-bottom: 1rem;
+    }
+    .progress-bar {
+      background: #333; border-radius: 10px; overflow: hidden; height: 15px;
+    }
+    .progress-bar > div {
+      height: 100%; background: #00bcd4;
+    }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;
+    }
+    .project-card {
+      background: #1f1f1f; padding: 1rem; border-radius: 8px;
+      box-shadow: 0 0 10px #00bcd4;
+    }
+    .project-card a {
+      color: #00bcd4; text-decoration: none; font-weight: 600;
+    }
+    .social-links a {
+      margin-right: 1rem; color: #00bcd4; text-decoration: none; font-size: 1.5rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1 class="fade-in">Srijita Kayal</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section class="intro fade-up">
-      <!-- Add your picture inside the folder and name it "profile.jpg" -->
-      <img src="profile.jpg" alt="Srijita Kayal" class="profile-pic">
-      <h2>Welcome to My Portfolio</h2>
-      <p>Hi 👋 I’m <strong>Srijita Kayal</strong>, a passionate <b>Data Analyst</b> who loves turning raw data into powerful insights.</p>
-      <a href="projects.html" class="btn">✨ View My Work</a>
-    </section>
-  </main>
+  <section id="home" class="hero">
+    <h1>Srijita Kayal</h1>
+    <p>Data Analyst | Business Analytics Enthusiast</p>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Srijita Kayal</p>
-  </footer>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="your-photo.jpg" alt="Srijita Kayal" />
+      <p>Currently pursuing an MBA in Business Analytics with a strong foundation in data analysis, visualization, and business reporting. Passionate about delivering data-driven insights to support strategic decision-making.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <h3>Python</h3>
+      <div class="progress-bar"><div style="width: 85%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>SQL</h3>
+      <div class="progress-bar"><div style="width: 80%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Power BI</h3>
+      <div class="progress-bar"><div style="width: 75%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Excel</h3>
+      <div class="progress-bar"><div style="width: 80%"></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Unemployment Data Analysis Dashboard</h3>
+        <p>Interactive dashboards visualizing unemployment trends with cleaned and structured datasets.</p>
+        <a href="https://github.com/srijita205/unemployment-dashboard" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Accenture Sales & Revenue Dashboard</h3>
+        <p>Real-time dashboards for revenue and performance metrics empowering strategic decisions.</p>
+        <a href="https://github.com/srijita205/accenture-sales-dashboard" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Performance Insights: Sales & Customer Behaviour</h3>
+        <p>Power BI dashboard analyzing 200 customers and 20 products with 31.19% YoY growth using DAX calculations.</p>
+        <a href="https://github.com/srijita205/performance-insights" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:kayalsrijita2000@gmail.com">kayalsrijita2000@gmail.com</a></p>
+    <p>Phone: +91 6291184806</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      <a href="https://github.com/srijita205" target="_blank" aria-label="GitHub">GitHub</a>
+      <a href="https://kaggle.com/srijita205" target="_blank" aria-label="Kaggle">Kaggle</a>
+    </div>
+  </section>
 </body>
 </html>
